@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+    <form class="one" id="registerForm">
+        <h1>Register</h1>
+        <label for="Fristname"> Frist Name</label><br>
+        <input type="text" id="Fristname" placeholder="Enter Name" required><br>
+        <label for="Lastname">Last Name</label><br>
+        <input type="text" id="Lastname" placeholder="Enter Name" required><br>
+        <label for="Email">Email</label><br>
+        <input type="email" id="Email" placeholder="hassanajmal@gmail.com" required><br>
+        <label for="Password">Password</label><br>
+        <input type="password" id="Password" required autocomplete="on"><br>
+        <button id="registration" type="submit">Create An Account</button>
+        <p>Already Have an account?<a href="">Login</a></p>
+     
+        
+        <p id="error-message"></p>
+    </form>
+    <script>
+   const fristname = document.getElementById("Fristname");
+const lastname = document.getElementById("Lastname");
+const email = document.getElementById("Email");
+const password = document.getElementById("Password");
+const registration = document.getElementById("registration");
+const registerForm = document.getElementById("registerForm");
+let form = JSON.parse(localStorage.getItem('list')) || [];
+
+
+function addData() {
+    const user = {
+        fullName: fristname.value,
+        lastName: lastname.value,
+        email: email.value,
+        password: password.value
+    };
+    form.push(user);
+    localStorage.setItem('list', JSON.stringify(form));
+}
+
+registration.addEventListener('click', function (event) {
+    event.preventDefault();
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.textContent = ""; 
+
+    if (fristname.value === "" || lastname.value === "" || email.value === "" || password.value === "") {
+        errorMessage.textContent = "Please fill all fields";
+    } else {
+
+        const existingUser  = form.find(user => user.email === email.value);
+        if (existingUser ) {
+            errorMessage.textContent = "Email is already registered. Please use a different email.";
+        } else {
+            addData();
+            alert('Registered Successfully');
+            window.Location.href="loginpage.html"
+        }
+    }
+});
+    </script>
+</body>
+</html>

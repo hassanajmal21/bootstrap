@@ -1,0 +1,352 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin-bottom: 30px;
+        }
+        .form-container input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #218838;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .product-card .price {
+            color: #28a745;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-card .add-to-cart {
+            background-color: #007bff;
+            color: white;
+        }
+        .product-card .buy-now {
+            background-color: #ffc107;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Page</h1>
+    <div class="form-container">
+        <input type="text" id="imageLink" placeholder="Enter Image Link" required>
+        <input type="text" id="productName" placeholder="Enter Product Name" required>
+        <input type="text" id="productTitle" placeholder="Enter Product Title" required>
+        <input type="number" id="productPrice" placeholder="Enter Product Price" required>
+        <textarea id="productDescription" placeholder="Enter Product Description" rows="4" required></textarea>
+        <button id="addProduct">Add Product</button>
+    </div>
+    <div class="products-container" id="productsContainer"></div>
+
+    <script>
+        const productsContainer = document.getElementById("productsContainer");
+        const addProductButton = document.getElementById("addProduct");
+
+        addProductButton.addEventListener("click", () => {
+            const imageLink = document.getElementById("imageLink").value;
+            const productName = document.getElementById("productName").value;
+            const productTitle = document.getElementById("productTitle").value;
+            const productPrice = document.getElementById("productPrice").value;
+            const productDescription = document.getElementById("productDescription").value;
+
+        let cart = []; // To store items added to the cart
+
+            // Validate inputs
+            if (!imageLink || !productName || !productTitle || !productPrice || !productDescription) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            // Create product card
+            const productCard = document.createElement("div");
+            productCard.classList.add("product-card");
+
+            productCard.innerHTML = `
+                <img src="${imageLink}" alt="Product Image">
+                <h3>${productName}</h3>
+                <p>${productTitle}</p>
+                <p class="price">Rs. ${productPrice}</p>
+                <p>${productDescription}</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            `;
+
+            // Add functionality to "Add to Cart" button
+            const addToCartButton = productCard.querySelector(".add-to-cart");
+            addToCartButton.addEventListener("click", () => {
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                });
+                cartCountElement.textContent = cart.length;
+                alert(`${productName} added to cart!`);
+            });
+
+            // Add functionality to "Buy Now" button
+            const buyNowButton = productCard.querySelector(".buy-now");
+            buyNowButton.addEventListener("click", () => {
+                alert(`Thank you for buying ${productName}!`);
+            });
+            productsContainer.appendChild(productCard);
+
+            // Clear the form inputs
+            document.getElementById("imageLink").value = "";
+            document.getElementById("productName").value = "";
+            document.getElementById("productTitle").value = "";
+            document.getElementById("productPrice").value = "";
+            document.getElementById("productDescription").value = "";
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        /* Same styles as before */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .form-container input, .form-container textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .product-card .price {
+            color: #28a745;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-card button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-card .add-to-cart {
+            background-color: #007bff;
+            color: white;
+        }
+        .product-card .buy-now {
+            background-color: #ffc107;
+            color: white;
+        }
+        .cart-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Page</h1>
+    <div class="cart-info">
+        Cart: <span id="cartCount">0</span> items
+    </div>
+    <div class="form-container">
+        <input type="text" id="imageLink" placeholder="Enter Image Link" required>
+        <input type="text" id="productName" placeholder="Enter Product Name" required>
+        <input type="text" id="productTitle" placeholder="Enter Product Title" required>
+        <input type="number" id="productPrice" placeholder="Enter Product Price" required>
+        <textarea id="productDescription" placeholder="Enter Product Description" rows="4" required></textarea>
+        <button id="addProduct">Add Product</button>
+    </div>
+    <div class="products-container" id="productsContainer"></div>
+
+    <script>
+        const productsContainer = document.getElementById("productsContainer");
+        const addProductButton = document.getElementById("addProduct");
+        const cartCountElement = document.getElementById("cartCount");
+
+        let cart = []; 
+
+        addProductButton.addEventListener("click", () => {
+            const imageLink = document.getElementById("imageLink").value;
+            const productName = document.getElementById("productName").value;
+            const productTitle = document.getElementById("productTitle").value;
+            const productPrice = document.getElementById("productPrice").value;
+            const productDescription = document.getElementById("productDescription").value;
+
+            if (!imageLink || !productName || !productTitle || !productPrice || !productDescription) {
+                alert("Please fill out all fields.");
+                return;
+            }
+
+            const productCard = document.createElement("div");
+            productCard.classList.add("product-card");
+
+            productCard.innerHTML = `
+                <img src="${imageLink}" alt="Product Image">
+                <h3>${productName}</h3>
+                <p>${productTitle}</p>
+                <p class="price">Rs. ${productPrice}</p>
+                <p>${productDescription}</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            `;
+
+         
+            const addToCartButton = productCard.querySelector(".add-to-cart");
+            addToCartButton.addEventListener("click", () => {
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                });
+                cartCountElement.textContent = cart.length;
+                alert(`${productName} added to cart!`);
+            });
+
+            const buyNowButton = productCard.querySelector(".buy-now");
+            buyNowButton.addEventListener("click", () => {
+                alert(`Thank you for buying ${productName}!`);
+                window.location.href = "buypage.html";
+                
+            });
+
+            productsContainer.appendChild(productCard);
+
+      
+            document.getElementById("imageLink").value = "";
+            document.getElementById("productName").value = "";
+            document.getElementById("productTitle").value = "";
+            document.getElementById("productPrice").value = "";
+            document.getElementById("productDescription").value = "";
+        });
+        const newProduct = {
+            image: imageLink,
+            name: productName,
+            title: productTitle,
+            price: productPrice,
+            description: productDescription,
+        };
+
+        products.push(newProduct); // Add new product to array
+        localStorage.setItem("products", JSON.stringify(products)); // Save updated products to local storage
+
+    </script>
+</body>
+</html>

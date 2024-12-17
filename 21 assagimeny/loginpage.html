@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="two" id="loginForm">
+        <h1>Login</h1>
+        <label for="gin">Email</label><br>
+        <input type="email" id="gin" placeholder="hassanajmal@gmail.com" required><br>
+        <label for="loginpass">Password</label><br>
+        <input type="password" id="loginpass" required autocomplete="on"><br>
+        <button id="log">Login</button>
+        <p id="login-error-message"></p>
+        <p>Don't Have an account? <a href="">Register</a></p>
+    </form>
+<button onclick="homenavigate()">Home page</button>
+    <script>
+     
+const logins = document.getElementById("logins");
+const loginForm = document.getElementById("loginForm"); 
+const lemail = document.getElementById("gin");
+const lpassword = document.getElementById("loginpass");
+const login = document.getElementById("log");
+let form = JSON.parse(localStorage.getItem('list')) || [];
+function homenavigate(){
+            window.location.href="index.html"
+        }
+
+login.addEventListener('click', function (event) {
+    event.preventDefault();
+    const loginErrorMessage = document.getElementById("login-error-message");
+    loginErrorMessage.textContent = ""; 
+
+
+    if (lemail.value === "" || lpassword.value === "") {
+        loginErrorMessage.textContent = "Please fill all fields";
+    } else {
+        const loginEmail = lemail.value;
+        const loginPassword = lpassword.value;
+        let user = form.find(user => user.email === loginEmail && user.password === loginPassword);
+        if (user) {
+            alert('Login Successful!');
+            window.location.href = "productPage.html";
+        } else {
+            alert('Invalid User, please try again.');
+        }
+    }
+});
+    </script>
+</body>
+</html>

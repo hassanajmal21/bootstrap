@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Design with Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    #background {
+      background-image: url(app-1.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 560px;
+    }
+
+    #star {
+      background-color: #F19A0D;
+      height: 460px;
+    }
+
+    #sec {
+      background-color: #F2F2F2;
+
+    }
+
+    #sec1 {
+      background-color: #F2F2F2;
+
+    }
+
+    #sec2 {
+      background-color: #8F77F4;
+      ;
+    }
+
+    #sec9 {
+      background-color: #C34DF1;
+
+    }
+
+    #footer {
+      background-color: #333333;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="background">
+    <div class="divs">
+      <div class="buttons">
+      <button id="logins" onclick="handleClick()">login</button>
+      <button id="register" onclick="handleClick2()">register</button>
+  </div>
+  </div>
+
+    <div class="container">
+      <div class="row pt-5 text-light">
+        <div class="col-lg-6 col-md-4 col-sm-1 "></div>
+        <div class="col-lg-6 col-md-8 col-sm-11 text-md-start text-center pt-5 ">
+          <h5 class="fs-6">ADD MORE SPEED TO YOUR WEBSITE</h5>
+          <h1 class="w-75"> YOUR SUCCESS IN THE INDUSTRY IS OUR MISSION </h1>
+
+          <p class="w-75">
+            Actually, this is quite simple to achieve - because each time we
+            help them in sorting out different accounting intricacies or save
+            the day before filing the taxes, they are happy indeed.
+          </p>
+          <p>Image from Freepik</p>
+          <button class="btn btn-light rounded-pill fw-bold p-3">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section.....2 -->
+  <div id="star">
+    <div class="container">
+      <div class="text-center text-light">
+        <h1 class="pt-5">GET OUR FREE NEWSLETTER + BONUS CONTENT</h1>
+        <form class="row justify-content-center pt-4">
+          <div class="col-lg-5 col-sm-8">
+            <input type="text" id="name" class="form-control rounded-5" placeholder="Enter a valid email address" />
+          </div>
+          <div class="col-lg-2 col-sm-4 mt-3 mt-lg-0 mt-md-0">
+            <button class="form-control rounded-5 fw-bold">Submit</button>
+          </div>
+        </form>
+        <p class="text-lg-center p-4">
+          You are subscribing to email updates. Your data is safe and you can
+          <br />
+          unsubscribe at anytime with a single click. Image from Freepik
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- section......3 -->
+  <div class="container">
+    <div class="text-center">
+      <h1 class="text-center pt-5 fw-bold">GET GREAT WORK FOR YOUR BUDGET</h1>
+      <p class="w-lg-m..t50 mx-auto text-center ">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa
+      </p>
+      <p class="text-center">Images from <span style="color:#f19a0d;"> Freepik </span></p>
+    </div>
+  </div>
+  <!-- section....4 -->
+  <div class="container">
+    <div class="row  justify-content-center mt-5 text-light justify-content-md-start">
+      <div class="col-lg-4 text-center pt-4 col-md-6 " style="background-color: #8F77F4; height: 229px;">
+        <img src="icon-1.PNG" alt="" width="60px" height="60px">
+        <h4>CONSULTING</h4>
+        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+      </div>
+      <div class="col-lg-4 text-center col-md-6 pt-4 " style="background-color: #F19A0D; height: 229px;">
+        <img src="icon-2.PNG" alt="" width="60px" height="60px">
+        <h4>MISSION</h4>
+        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+      </div>
+      <div class="col-lg-4 text-center pt-4 col-md-6" style="background-color: #C34DF1;height:229px;">
+        <img src="icon-3.PNG" alt="" width="60px" height="60px">
+        <h4>STRATEGY</h4>
+        <p class="w-md-50 justify-content-md-center">Sample text. Click to select the text box. Click again or double
+          click to start editing the text.</p>
+      </div>
+    </div>
+  </div>
+  <!-- section....5 -->
+  <div class="mt-5 pb-md-4" id="sec">
+    <div class="container w-lg-75 w-md-100">
+      <div class="text-center">
+        <h3 class="text-lg-center fw-bold pt-5">GALLERY</h3>
+        <p class="text-lg-center">Images from <span style="color:#f19a0d;"> Freepik </span></p>
+      </div>
+      <div class="row mt-4 ">
+        <div class="col-lg-4 col-md-6">
+          <img src="img_2.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_3.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_4.jpg" alt="" class="w-100 h-100">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <img src="img_5.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_6.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_7.jpg" alt="" class="w-100 h-100">
+        </div>
+      </div>
+      <p class="text-lg-center mt-4 fw-bold">WE DESIGN PEOPLE INSPIRED EXPERIENCES THAT POSITIVE CHANGE IN PEOPLE'S
+        LIVES.</p>
+    </div>
+  </div>
+  <!-- section....6 -->
+  <div class="container">
+    <div>
+      <h3 class="text-center fw-bold mt-4">TOGETHER WE CAN ENVISION, INSPIRE <br> AND TRANSFORM YOUR BUSINESS</h3>
+    </div>
+    <div class="row justify-content-center  text-light mt-4 justify-content-md-start">
+      <div class="col-lg-4 text-center  pt-4 py-5 w-lg-25 col-sm-6 fw-bold" style="background-color: #8F77F4;">
+        <h1>16%</h1>
+        <p>Sample text. Click to select the text box</p>
+      </div>
+      <div class="col-lg-4 text-center  pt-4 py-5 w-lg-25 col-sm-6 fw-bold" style="background-color: #F19A0D;">
+        <h1>12%</h1>
+        <p>Click again or double.</p>
+      </div>
+      <div class="col-lg-4 text-center  pt-4 py-5 w-lg-25 col-sm-6 fw-bold" style="background-color: #C34DF1;">
+        <h1>14%</h1>
+        <p>Click again or double click to start <br> editing the text.</p>
+      </div>
+    </div>
+  </div>
+  <!-- section....7 -->
+  <div class="mt-5 pb-4" id="sec1">
+    <div class="container w-75">
+      <div>
+        <h3 class="text-center fw-bold pt-5">MEET OUR TEAM</h3>
+        <p class="  mt-3 text-center">We develop an individual integrated solution for your business and select a <br>
+          unique set of services for it, combining them with a single strategy and goal</p>
+        <p class="text-center">Images from <span style="color:#f19a0d;"> Freepik </span></p>
+      </div>
+      <div class="row mt-4 ">
+        <div class="col-lg-4 col-md-6">
+          <img src="img_8.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_9.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_10.jpg" alt="" class="w-100 h-100">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6">
+          <img src="img_11.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_-12.jpg" alt="" class="w-100 h-100">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="img_13.jpg" alt="" class="w-100 h-100">
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-warning text-light rounded-5 mt-5 px-4">Read More</button>
+      </div>
+    </div>
+  </div>
+  <!-- section....8 -->
+  <div id="sec2">
+    <div class="container">
+      <div class="text-light text-center pt-5  pb-5 ">
+        <h5>ADD MORE SPEED TO YOUR WEBSITE</h5>
+        <h1 class="fw-bold w-md-50">YOUR SUCCESS IN THE INDUSTRY IS OUR MISSION</h1>
+        <p class="pt-2 ">Sample text. Click to select the Text Element.</p>
+        <div class="text-center">
+          <button class="btn btn-warning text-light rounded-5 px-4">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container ">
+      <div class="row justify-content-center ">
+        <div class="col-lg-7 col-md-6 col-11 p-4">
+          <h1 class="fw-bolder pe-lg-5 pe-2 pb-2 text-center text-md-start">HOW DO WE HELP COMPANIES TO TRANSFORM?</h1>
+          <p class="fw-bold pb-4">WE CREATED OUR OWN DIGITAL TRANSFORMATION METHODOLOGY</p>
+          <div class="input-textarea  ">
+
+            <div class="row ">
+              <div class="col-lg-9 col-md-10 col-10 ">
+                <span class=" fw-bold purple" data-bs-toggle="collapse" data-bs-target="#first">01. What is off page
+                  seo link
+                  building?</span>
+              </div>
+              <div class="col-lg-3 col-md-2 col-2 ">
+                <img src="icon.png" alt="" width="80px" class="float-end"
+                  data-bs-toggle="collapse" data-bs-target="#first">
+              </div>
+              <textarea id="first" class="collapse p-4 show " rows="4"
+                placeholder="Sample text. Click to select the Text Element."></textarea>
+            </div>
+   
+            <div class="row pt-2">
+              <div class="col-lg-9 col-md-10 col-10">
+                <span class=" fw-bold" data-bs-toggle="collapse" data-bs-target="#second">02. House Painting
+                  Essentials?</span>
+              </div>
+              <div class="col-lg-3 col-md-2 col-2">
+                <img src="icon.png" alt="" width="80px" class="float-end"
+                  data-bs-toggle="collapse" data-bs-target="#second">
+              </div>
+              <textarea id="second" class="collapse  p-4 " rows="4"
+                placeholder="Sample text. Click to select the Text Element."></textarea>
+            </div>
+            <div class="row pt-2">
+              <div class="col-lg-9 col-md-10 col-10">
+                <span class=" fw-bold" data-bs-toggle="collapse" data-bs-target="#third">03. Plan Ahead For
+                  Home Painting?</span>
+              </div>
+              <div class="col-lg-3 col-md-2 col-2">
+                <img src="icon.png" alt="" width="80px" class="float-end"
+                  data-bs-toggle="collapse" data-bs-target="#third">
+              </div>
+              <textarea id="third" class="collapse p-4" rows="4"
+                placeholder="Sample text. Click to select the Text Element."></textarea>
+            </div>
+          </div>
+        </div>
+        <div id="sec2" class="col-lg-5 col-md-6 h-100 col-11 align-self-center blue text-light ">
+          <p class="p-lg-5 p-md-4 p-2 py-5">We want to understand who your clients are, how
+            digital-savvy and engaged
+            your
+            employees are, what you are already doing to build a future-proof organisation and absorb anything you're
+            willing to throw at us.
+            To do this, we gather insights from your employees, we interview key stakeholders and thoroughly look into
+            your organisation.</p>
+        </div>
+      </div>
+    </div>
+  <div id="sec9" class="mt-5">
+    <div class="container text-md-start text-center">
+      <div class="row justify-content-center pt-5 text-light">
+        <div class="col-lg-5 col-md-7">
+          <h3 class="w-75 fw-bold">GET YOUR FREE CONSULTATION NOW!</h3>
+          <p class="w-75 mt-2">Small or big, your business will love our financial help and
+            business consultations! We are happy when our clients are too...</p>
+        </div>
+        <div class="col-lg-5 col-md-4  mt-5">
+          <button class="btn btn-warning text-light rounded-5">FREE CONSULTATION</button>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-lg-5 col-md-6  text-light mt-4">
+          <h5 class="w-75">New York, 4456 Parker Rd. Allentown, New Mexico 4567</h5>
+          <p>+1(505) 556-9999</p>
+          <p class="fw-bold" style="color: #f19a0d;">NAMECOMPANY@EXAMPLE.COM</p>
+        </div>
+        <div class="col-lg-5 col-md-6 text-light mt-5 ">
+          <h3>SIGN ME UP!</h3>
+          <p>Actually, this is quite simple to achieve - because <br> each time we help them in sorting  out different <br> accounting intricacies  or save the day before filing <br>  the taxes, they are happy indeed</p>
+          <div class="row justify-content-center pb-5">
+            <input   type="email" placeholder="Enter a valid email address" class="  rounded-5 col-lg-7 col-md-7 border-0">
+          <button type="button" class="btn btn-warning text-light rounded-5  col-lg-3 col-md-4 ms-lg-2 ms-md-2 mt-sm-2 ">Submit</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="text-center text-light pb-4">
+      <p class="pt-5 pb-3">Sample text. Click to select the Text Element.</p>
+      <p class="mt-5">This site was created with the <span style="color: #8F77F4;"> Nicepage </span></p>
+    </div>
+  </div>
+  <script>
+    const fristname = document.getElementById("Fristname");
+    const lastname = document.getElementById("Lastname");
+    const email = document.getElementById("Email");
+    const password = document.getElementById("Password");
+    const lemail = document.getElementById("gin");
+    const lpassword = document.getElementById("loginpass");
+    const login = document.getElementById("log");
+    const registration = document.getElementById("registration");
+    const registerForm = document.getElementById("registerForm");
+    const loginForm = document.getElementById("loginForm"); 
+    const logins = document.getElementById("logins");
+    let form = JSON.parse(localStorage.getItem('list')) || [];
+    
+    function handleClick() {
+      window.location.href = "loginpage.html";
+        // registerForm.style.display = "none";
+        // loginForm.style.display = "block";
+    }
+    
+    function handleClick2() {
+      window.location.href = "register.html";
+        // loginForm.style.display = "none";
+        // registerForm.style.display = "block";
+    }
+    
+    function addData() {
+        const user = {
+            fullName: fristname.value,
+            lastName: lastname.value,
+            email: email.value,
+            password: password.value
+        };
+        form.push(user);
+        localStorage.setItem('list', JSON.stringify(form));
+    }
+    
+    registration.addEventListener('click', function (event) {
+        event.preventDefault();
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.textContent = ""; 
+    
+        if (fristname.value === "" || lastname.value === "" || email.value === "" || password.value === "") {
+            errorMessage.textContent = "Please fill all fields";
+        } else {
+    
+            const existingUser  = form.find(user => user.email === email.value);
+            if (existingUser ) {
+                errorMessage.textContent = "Email is already registered. Please use a different email.";
+            } else {
+                addData();
+                alert('Registered Successfully');
+            }
+        }
+    });
+    
+    login.addEventListener('click', function (event) {
+        event.preventDefault();
+        const loginErrorMessage = document.getElementById("login-error-message");
+        loginErrorMessage.textContent = ""; 
+    
+    
+        if (lemail.value === "" || lpassword.value === "") {
+            loginErrorMessage.textContent = "Please fill all fields";
+        } else {
+            const loginEmail = lemail.value;
+            const loginPassword = lpassword.value;
+            let user = form.find(user => user.email === loginEmail && user.password === loginPassword);
+            if (user) {
+                alert('Login Successful!');
+                window.location.href = "productPage.html";
+            } else {
+                alert('Invalid User, please try again.');
+            }
+        }
+    });
+        </script>
+
+</body>
+
+</html>
